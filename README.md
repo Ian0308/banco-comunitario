@@ -65,7 +65,7 @@ Cada cliente do banco deve possuir:
 
 ## 🧪 Testes
 
-Você deve realizar testes (unitários ou manuais) para verificar:
+Você deve realizar testes para verificar:
 
 - Criação de clientes e contas
 - Validação de renda para conta corrente
