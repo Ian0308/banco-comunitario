@@ -1,4 +1,5 @@
-import { Icliente } from "./Icliente.ts";
+import { Icliente } from "./Icliente.Ts";
+
 
 export class Cliente implements Icliente{
 nome:string;
@@ -16,5 +17,6 @@ constructor(nome:string,id:number,endreco:string,telefone:number,renda:number){
 
 
 }
+    rendasala: number;
 
 }
