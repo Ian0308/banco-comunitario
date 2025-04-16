@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente";
+import { Cliente } from "./Cliente";
 import { IConta } from "./IConta";
 
 export class ContaCorente implements IConta{

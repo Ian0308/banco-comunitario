@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente";
+import { Cliente } from "./Cliente";
 
 export interface IConta{
     saldo:number;

@@ -1,6 +1,6 @@
-import { Cliente } from "./cliente";
+import { Cliente } from "./Cliente";
 import { ContaCorente } from "./ContaCorente";
-import { ContaPoupanca } from "./contaPoupança";
+import { ContaPoupanca } from "./ContaPoupança";
 import { IConta } from "./IConta";
 
 const c1:Cliente = new Cliente("pedro henrique", 1, "Apiúna", "(47) 99842-3213", 1500);
@@ -9,11 +9,12 @@ const c3:Cliente = new Cliente("maria helena", 3, "Lontras", "(47) 99863-7453", 
 
 let cc2:IConta;
 if(c2.renda_salarial>=500){
-    cc2 = new ContaPoupanca(400, c2, 2);
-}else{
     cc2 = new ContaCorente(400, c2);
+    cc2.deposito(1000);
+}else{
+    console.log("Erro ao criar conta corrente. Criando conta poupança!");
+    cc2 = new ContaPoupanca(400, c2, 2);
 }
-
 let cc3:ContaPoupanca = new ContaPoupanca(1000, c3, 2);
 
 
@@ -24,10 +25,9 @@ cc1.saque(10);
 cc1.verificarSaldo();
 cc1.transferencia(1790, cc2);
 cc1.verificarSaldo();
-cc2.verificarSaldo();
-cc1.sacarChequeEspecial(100);
+cc1.sacarChequeEspecial(80);
 cc1.verificarSaldo();
-console.log(cc1.chequeEspecial);
+console.log("Cheque restante: " + cc1.chequeEspecial);
 
 cc3.verificarSaldo();
 cc3.calculoJuros();
