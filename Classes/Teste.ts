@@ -1,8 +1,8 @@
 let cliente1 = new Cliente(1, "João Silva", "Rua 1", "1111-1111", 1000)
 let cliente2 = new Cliente(2, "Maria Santos", "Rua 2", "2222-2222", 400)
 
-let conta1 = new Conta(101, "corrente", cliente1) 
-let conta2 = new Conta(102, "poupanca", cliente2)
+let conta1 = new Conta("corrente", cliente1) 
+let conta2 = new Conta("poupanca", cliente2)
 
 conta1.depositar(500)
 conta1.sacar(550)
