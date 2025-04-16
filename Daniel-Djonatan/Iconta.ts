@@ -1,12 +1,16 @@
-export interface Contacorrente{
-    
-deposito:number;
-saque:number;
-tranferencia:number;
-verificarsaldo:number;
+import { Icliente } from "./Icliente";
 
 
-
+export interface Iconta{
+numero:number;
+cliente:Icliente;
+saldo:number;
+deposito(valor:number):void;
+sacar(valor:number):boolean;
+tranferir(destino:Iconta,valor:number):boolean;
+verificarsaldo():number;
 
 
 }
+
+
