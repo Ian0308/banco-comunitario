@@ -1,13 +1,8 @@
-import { ICliente } from "./ICliente";
-
-export interface IConta {
-    numero: number;
-    cliente: ICliente;
+export interface IConta{ 
     saldo: number;
 
-    depositar(valor: number): void;
-    sacar(valor: number): boolean;
-    transferir(contaDestino: IConta, valor: number): boolean;
-    verificarSaldo(): number;
+    deposito(valorDepositar: number):void;
+    saque(valorSacar: number):void;
+    transferencia(valorTrasferir: number, cliente2: IConta):void;
+    verificarsaldo():void;
 }
-
