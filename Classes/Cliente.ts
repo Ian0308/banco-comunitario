@@ -9,7 +9,4 @@ export class Cliente implements ICliente{
         this.telefone = telefone
         this.salario = salario
     }
-   
-    
-
 }
